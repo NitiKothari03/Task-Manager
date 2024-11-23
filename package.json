@@ -1,0 +1,19 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Task Management Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.0",
+    "body-parser": "^1.19.0",
+    "express-validator": "^6.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
