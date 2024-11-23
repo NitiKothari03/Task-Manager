@@ -13,8 +13,6 @@ A simple web-based Task Manager application that allows users to create, view, u
 ---
 
 ## Project Structure
-
-```plaintext
 ├── config/
 │   └── database.js       # Configuration for database and server port
 ├── models/
@@ -26,14 +24,14 @@ A simple web-based Task Manager application that allows users to create, view, u
 └── app.js                # Main application entry point
 
 
-Prerequisites
+## Prerequisites
 
 Before running the project, ensure you have the following installed:
 
 Node.js (v14 or later)
 MongoDB (running locally or remotely)
 
-Getting Started
+## Getting Started
 
 1. Clone the Repository
 git clone <repository-url>
@@ -47,20 +45,14 @@ NODE_ENV=development
 Note: The default configuration uses a local MongoDB instance.
 4. Start MongoDB Server
 Make sure your MongoDB server is running on localhost:27017. You can start it with:
-
 mongod
-Running the Application
 
-1. Start the Backend Server
-Run the following command to start the backend:
+## Running the Application
 
-node app.js
-The backend server will run on http://localhost:3000.
+Run the following command to start the application:
+npm run dev
 
-2. Open the Frontend
-Open public/index.html in a web browser.
-
-API Endpoints
+## API Endpoints
 
 Method	Endpoint	Description
 GET	/api/tasks	Fetch all tasks
@@ -70,7 +62,7 @@ PUT	/api/tasks/:id	Update an existing task
 DELETE	/api/tasks/:id	Delete a task
 Code Highlights
 
-Database Configuration
+## Database Configuration
 Located in config/database.js:
 
 const config = {
@@ -81,7 +73,8 @@ const config = {
 };
 
 module.exports = config[process.env.NODE_ENV || 'development'];
-Task Schema
+
+## Task Schema
 Located in models/task.js:
 
 const taskSchema = new mongoose.Schema({
@@ -93,7 +86,8 @@ const taskSchema = new mongoose.Schema({
 }, {
   timestamps: true
 });
-Additional Information
+
+## Additional Information
 
 Frontend: Vanilla JavaScript and basic HTML/CSS.
 Backend: Express.js with MongoDB for data storage.
